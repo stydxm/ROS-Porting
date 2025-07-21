@@ -158,46 +158,29 @@ python3 verify_packages.py --skip-update
 ```
 
 4. 核心功能：
-- **包安装验证**
-    
-    - 使用 `sudo dnf install` 测试每个包
-        
-    - 检测三种状态：
-        
-        - 成功安装
-            
-        - 已经安装
-            
+- **包安装验证**    
+    - 使用 `sudo dnf install` 测试每个包        
+    - 检测三种状态：        
+        - 成功安装            
+        - 已经安装          
         - 安装失败
             
-- **增量更新**
-    
-    - 每验证一个包就保存一次结果
-        
-    - 防止中断导致数据丢失
-        
-    - 更新字段：
-        
-        - `install_verify`: 设为"y"表示已验证
-            
-        - `miss`: "n"表示可用，"unknown"表示不可用
-            
-        - `system_pkg`: 成功时设为包名
-            
-        - `last_check`: 记录检查时间
-            
-- **输出文件命名**
-    
-    - 自动去除输入文件名中的"raw"
-        
-    - 例如：`buildrequire_list_raw.json` → `buildrequire_list.json`
-        
-- **统计报告**
-    
-    - 显示验证进度
-        
-    - 汇总成功/失败统计
-        
+- **增量更新**    
+    - 每验证一个包就保存一次结果        
+    - 防止中断导致数据丢失        
+    - 更新字段：        
+        - `install_verify`: 设为"y"表示已验证            
+        - `miss`: "n"表示可用，"unknown"表示不可用            
+        - `system_pkg`: 成功时设为包名            
+        - `last_check`: 记录检查时间  
+
+- **输出文件命名**    
+    - 自动去除输入文件名中的"raw"        
+    - 例如：`buildrequire_list_raw.json` → `buildrequire_list.json`   
+
+- **统计报告**   
+    - 显示验证进度       
+    - 汇总成功/失败统计       
     - 列出失败的包
 
 
@@ -222,6 +205,7 @@ Results saved to: /home/Melon/verify_json/buildrequire_list.json
 - 无法安装
 	- 找不到包
 	- 因为其他原因
+    
 如果是前两种情况的话，大可以直接记录没有确保，于是需要另一个条目记录是否缺包，那么就：`miss` 吧。前两种情况写：n，如果是无法安装就写 unknown，因为可能的问题是：
 1. 真的没有这个包 -> 即缺包
 2. 命名问题 -> 有这个包，但是名字不一样

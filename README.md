@@ -19,7 +19,7 @@ python3 verify_packages.py --input buildrequire_list_raw.json
 - 这个方案整体是如何设计出来的
 - 更详细的背景与动机
 
-请点击这里。
+请点击[这里](https://github.com/Sebastianhayashi/ROS-Porting/blob/main/Verification_Scheme_for_System-Level_Dependency.md)。
 ## 背景与动机（Why）
 > 脚本核心价值在于在非 ROS 官方支持（即不支持 rosdep）的发行版上验证 ROS 包依赖的工具。
 
@@ -32,7 +32,7 @@ python3 verify_packages.py --input buildrequire_list_raw.json
 于是在这样的背景下有了该脚本。
 脚本可以的思路可以被借鉴复用，用一种简单的方式来搜集、管理并且验证相关的 ROS 系统级依赖的完备性。
 
-本脚本的贡献主要是在于提供一个思路，由于本脚本高度的针对特殊需求进行优化，所以不一定能够适应大部分的场景。更多相关的思路请参考这里(link)。
+本脚本的贡献主要是在于提供一个思路，由于本脚本高度的针对特殊需求进行优化，所以不一定能够适应大部分的场景。更多相关的思路请参考[这里](https://github.com/Sebastianhayashi/ROS-Porting/blob/main/Verification_Scheme_for_System-Level_Dependency.md)。
 
 本文中叙述的脚本主要功能：
 -  extract_buildrequires.py -> 生成依赖清单

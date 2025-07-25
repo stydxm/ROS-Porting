@@ -1,0 +1,1509 @@
+[
+  {
+    "require_pkg": "CUnit-devel",
+    "system_pkg": "CUnit-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cyclonedds"
+    ],
+    "last_check": "2025-07-23 13:10:53"
+  },
+  {
+    "require_pkg": "Catch2-devel",
+    "system_pkg": "Catch2-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "pick",
+      "rsl"
+    ],
+    "last_check": "2025-07-23 13:10:59"
+  },
+  {
+    "require_pkg": "GraphicsMagick-c++-devel",
+    "system_pkg": "GraphicsMagick-c++-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "nav2"
+    ],
+    "last_check": "2025-07-23 13:11:07"
+  },
+  {
+    "require_pkg": "SDL2-devel",
+    "system_pkg": "SDL2-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "sdl2"
+    ],
+    "last_check": "2025-07-23 13:11:13"
+  },
+  {
+    "require_pkg": "abseil-cpp-devel",
+    "system_pkg": "abseil-cpp-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer"
+    ],
+    "last_check": "2025-07-23 13:11:20"
+  },
+  {
+    "require_pkg": "acl",
+    "system_pkg": "acl",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "iceoryx"
+    ],
+    "last_check": "2025-07-23 13:11:23"
+  },
+  {
+    "require_pkg": "asio-devel",
+    "system_pkg": "asio-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "fastrtps",
+      "io",
+      "libmavconn",
+      "serial",
+      "ublox",
+      "udp"
+    ],
+    "last_check": "2025-07-23 13:11:26"
+  },
+  {
+    "require_pkg": "assimp-devel",
+    "system_pkg": "assimp-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "geometric",
+      "moveit",
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:11:33"
+  },
+  {
+    "require_pkg": "boost-devel",
+    "system_pkg": "boost-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "behaviortree",
+      "boost",
+      "cartographer",
+      "cv",
+      "eigenpy",
+      "filters",
+      "geometric",
+      "hls",
+      "image",
+      "libnabo",
+      "libpointmatcher",
+      "mod",
+      "moveit",
+      "nao",
+      "nav2",
+      "ompl",
+      "pal",
+      "pilz",
+      "random",
+      "robot",
+      "rviz",
+      "slam",
+      "srdfdom",
+      "swri",
+      "urg",
+      "warehouse"
+    ],
+    "last_check": "2025-07-23 13:11:36"
+  },
+  {
+    "require_pkg": "bullet-devel",
+    "system_pkg": "bullet-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "moveit",
+      "tf2"
+    ],
+    "last_check": "2025-07-23 13:11:43"
+  },
+  {
+    "require_pkg": "cairo-devel",
+    "system_pkg": "cairo-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer"
+    ],
+    "last_check": "2025-07-23 13:11:54"
+  },
+  {
+    "require_pkg": "ceres-solver-devel",
+    "system_pkg": "ceres-solver-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer",
+      "nav2",
+      "robot",
+      "slam"
+    ],
+    "last_check": "2025-07-23 13:12:03"
+  },
+  {
+    "require_pkg": "clang-tools-extra",
+    "system_pkg": "clang-tools-extra",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rsl"
+    ],
+    "last_check": "2025-07-23 13:12:45"
+  },
+  {
+    "require_pkg": "cmake",
+    "system_pkg": "cmake",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament",
+      "apriltag",
+      "cartographer",
+      "cyclonedds",
+      "dynamic",
+      "eigenpy",
+      "fastcdr",
+      "fastrtps",
+      "foonathan",
+      "gmock",
+      "google",
+      "gtest",
+      "iceoryx",
+      "ignition",
+      "libnabo",
+      "libpointmatcher",
+      "magic",
+      "mavlink",
+      "octomap",
+      "octovis",
+      "ompl",
+      "osrf",
+      "rcdiscover",
+      "rmf",
+      "ros",
+      "ruckig",
+      "sdformat",
+      "ur",
+      "urdfdom",
+      "vrpn"
+    ],
+    "last_check": "2025-07-23 13:12:48"
+  },
+  {
+    "require_pkg": "console-bridge-devel",
+    "system_pkg": "console-bridge-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "class",
+      "console",
+      "libmavconn",
+      "srdfdom",
+      "tf2",
+      "urdfdom"
+    ],
+    "last_check": "2025-07-23 13:12:53"
+  },
+  {
+    "require_pkg": "cppzmq-devel",
+    "system_pkg": "cppzmq-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "behaviortree"
+    ],
+    "last_check": "2025-07-23 13:13:06"
+  },
+  {
+    "require_pkg": "curl",
+    "system_pkg": "curl",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libcurl",
+      "microstrain"
+    ],
+    "last_check": "2025-07-23 13:13:09"
+  },
+  {
+    "require_pkg": "dkms",
+    "system_pkg": "dkms",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "librealsense2"
+    ],
+    "last_check": "2025-07-23 13:14:02"
+  },
+  {
+    "require_pkg": "doxygen",
+    "system_pkg": "doxygen",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "eigenpy",
+      "ignition",
+      "rsl"
+    ],
+    "last_check": "2025-07-23 13:14:15"
+  },
+  {
+    "require_pkg": "eigen3-devel",
+    "system_pkg": "eigen3-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "apriltag",
+      "aruco",
+      "cartographer",
+      "eigen",
+      "eigenpy",
+      "geometric",
+      "grid",
+      "ignition",
+      "kinematics",
+      "laser",
+      "libg2o",
+      "libnabo",
+      "libpointmatcher",
+      "mod",
+      "moveit",
+      "nav2",
+      "ompl",
+      "orocos",
+      "pcl",
+      "realsense2",
+      "rmf",
+      "robot",
+      "rot",
+      "rsl",
+      "rt",
+      "rviz",
+      "slam",
+      "tf2"
+    ],
+    "last_check": "2025-07-23 13:14:17"
+  },
+  {
+    "require_pkg": "elfutils-devel",
+    "system_pkg": "elfutils-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "backward"
+    ],
+    "last_check": "2025-07-23 13:14:24"
+  },
+  {
+    "require_pkg": "fcl-devel",
+    "system_pkg": "fcl-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "moveit"
+    ],
+    "last_check": "2025-07-23 13:14:33"
+  },
+  {
+    "require_pkg": "file",
+    "system_pkg": "file",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libcurl"
+    ],
+    "last_check": "2025-07-23 13:14:36"
+  },
+  {
+    "require_pkg": "flann-devel",
+    "system_pkg": "flann-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ompl"
+    ],
+    "last_check": "2025-07-23 13:14:42"
+  },
+  {
+    "require_pkg": "fmt-devel",
+    "system_pkg": "fmt-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "generate",
+      "parameter",
+      "pick",
+      "rsl"
+    ],
+    "last_check": "2025-07-23 13:14:45"
+  },
+  {
+    "require_pkg": "freeglut-devel",
+    "system_pkg": "freeglut-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "moveit"
+    ],
+    "last_check": "2025-07-23 13:14:53"
+  },
+  {
+    "require_pkg": "freetype-devel",
+    "system_pkg": "freetype-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:14:56"
+  },
+  {
+    "require_pkg": "gflags-devel",
+    "system_pkg": "gflags-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer",
+      "robot"
+    ],
+    "last_check": "2025-07-23 13:14:59"
+  },
+  {
+    "require_pkg": "git",
+    "system_pkg": "git",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer",
+      "eigenpy",
+      "foonathan",
+      "google",
+      "iceoryx",
+      "ignition",
+      "libyaml",
+      "mcap",
+      "microstrain",
+      "mimick",
+      "orocos",
+      "pybind11",
+      "rsl",
+      "rviz",
+      "uncrustify",
+      "zstd"
+    ],
+    "last_check": "2025-07-23 13:15:02"
+  },
+  {
+    "require_pkg": "glew-devel",
+    "system_pkg": "glew-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "moveit"
+    ],
+    "last_check": "2025-07-23 13:15:08"
+  },
+  {
+    "require_pkg": "glog-devel",
+    "system_pkg": "glog-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer"
+    ],
+    "last_check": "2025-07-23 13:15:11"
+  },
+  {
+    "require_pkg": "gmock-devel",
+    "system_pkg": "gmock-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer"
+    ],
+    "last_check": "2025-07-23 13:15:18"
+  },
+  {
+    "require_pkg": "google-benchmark-devel",
+    "system_pkg": "google-benchmark-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "google"
+    ],
+    "last_check": "2025-07-23 13:15:21"
+  },
+  {
+    "require_pkg": "gpsd-devel",
+    "system_pkg": "gpsd-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "gpsd"
+    ],
+    "last_check": "2025-07-23 13:15:26"
+  },
+  {
+    "require_pkg": "gpsd-libs",
+    "system_pkg": "gpsd-libs",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "gpsd"
+    ],
+    "last_check": "2025-07-23 13:15:29"
+  },
+  {
+    "require_pkg": "gtest-devel",
+    "system_pkg": "gtest-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer"
+    ],
+    "last_check": "2025-07-23 13:15:32"
+  },
+  {
+    "require_pkg": "ignition-math-devel",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "unknown",
+    "required_by": [
+      "irobot"
+    ],
+    "last_check": "2025-07-23 13:15:35"
+  },
+  {
+    "require_pkg": "jq",
+    "system_pkg": "jq",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "microstrain"
+    ],
+    "last_check": "2025-07-23 13:15:38"
+  },
+  {
+    "require_pkg": "lapack-devel",
+    "system_pkg": "lapack-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "slam"
+    ],
+    "last_check": "2025-07-23 13:15:57"
+  },
+  {
+    "require_pkg": "leveldb-devel",
+    "system_pkg": "leveldb-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "foros"
+    ],
+    "last_check": "2025-07-23 13:16:04"
+  },
+  {
+    "require_pkg": "libX11-devel",
+    "system_pkg": "libX11-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:16:07"
+  },
+  {
+    "require_pkg": "libXaw-devel",
+    "system_pkg": "libXaw-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:16:16"
+  },
+  {
+    "require_pkg": "libXext-devel",
+    "system_pkg": "libXext-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "qt"
+    ],
+    "last_check": "2025-07-23 13:16:19"
+  },
+  {
+    "require_pkg": "libXrandr-devel",
+    "system_pkg": "libXrandr-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:16:24"
+  },
+  {
+    "require_pkg": "libacl-devel",
+    "system_pkg": "libacl-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "iceoryx"
+    ],
+    "last_check": "2025-07-23 13:16:27"
+  },
+  {
+    "require_pkg": "libatomic",
+    "system_pkg": "libatomic",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "iceoryx",
+      "rcutils"
+    ],
+    "last_check": "2025-07-23 13:16:30"
+  },
+  {
+    "require_pkg": "libccd-devel",
+    "system_pkg": "libccd-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rmf"
+    ],
+    "last_check": "2025-07-23 13:16:33"
+  },
+  {
+    "require_pkg": "libcurl-devel",
+    "system_pkg": "libcurl-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libcurl"
+    ],
+    "last_check": "2025-07-23 13:16:38"
+  },
+  {
+    "require_pkg": "libogg-devel",
+    "system_pkg": "libogg-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "theora"
+    ],
+    "last_check": "2025-07-23 13:16:46"
+  },
+  {
+    "require_pkg": "libomp-devel",
+    "system_pkg": "libomp-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "moveit"
+    ],
+    "last_check": "2025-07-23 13:16:49"
+  },
+  {
+    "require_pkg": "libpcap-devel",
+    "system_pkg": "libpcap-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "velodyne"
+    ],
+    "last_check": "2025-07-23 13:16:54"
+  },
+  {
+    "require_pkg": "libspnav-devel",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "unknown",
+    "required_by": [
+      "spacenav"
+    ],
+    "last_check": "2025-07-23 13:16:57"
+  },
+  {
+    "require_pkg": "libtheora-devel",
+    "system_pkg": "libtheora-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "theora"
+    ],
+    "last_check": "2025-07-23 13:17:02"
+  },
+  {
+    "require_pkg": "libudev-devel",
+    "system_pkg": "libudev-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "librealsense2"
+    ],
+    "last_check": "2025-07-23 13:17:09"
+  },
+  {
+    "require_pkg": "libusbx-devel",
+    "system_pkg": "libusbx-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libphidget22",
+      "librealsense2",
+      "lusb",
+      "ublox"
+    ],
+    "last_check": "2025-07-23 13:17:15"
+  },
+  {
+    "require_pkg": "libuuid-devel",
+    "system_pkg": "libuuid-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "bondcpp"
+    ],
+    "last_check": "2025-07-23 13:17:18"
+  },
+  {
+    "require_pkg": "libzstd-devel",
+    "system_pkg": "libzstd-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "zstd"
+    ],
+    "last_check": "2025-07-23 13:17:21"
+  },
+  {
+    "require_pkg": "lua-devel",
+    "system_pkg": "lua-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer"
+    ],
+    "last_check": "2025-07-23 13:17:27"
+  },
+  {
+    "require_pkg": "mesa-libGL-devel",
+    "system_pkg": "mesa-libGL-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libg2o",
+      "moveit",
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:17:30"
+  },
+  {
+    "require_pkg": "mesa-libGLU-devel",
+    "system_pkg": "mesa-libGLU-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libg2o",
+      "moveit",
+      "octovis",
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:17:33"
+  },
+  {
+    "require_pkg": "minizip-devel",
+    "system_pkg": "minizip-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rviz"
+    ],
+    "last_check": "2025-07-23 13:17:38"
+  },
+  {
+    "require_pkg": "ncurses-devel",
+    "system_pkg": "ncurses-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "behaviortree",
+      "foros"
+    ],
+    "last_check": "2025-07-23 13:17:44"
+  },
+  {
+    "require_pkg": "nlohmann-json-devel",
+    "system_pkg": "nlohmann-json-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "nav2",
+      "rmf"
+    ],
+    "last_check": "2025-07-23 13:17:50"
+  },
+  {
+    "require_pkg": "opencv",
+    "system_pkg": "opencv",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "apriltag",
+      "bag2",
+      "cv",
+      "depth",
+      "depthimage",
+      "image",
+      "intra",
+      "rmf",
+      "stereo",
+      "theora"
+    ],
+    "last_check": "2025-07-23 13:18:08"
+  },
+  {
+    "require_pkg": "openssl-devel",
+    "system_pkg": "openssl-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cyclonedds",
+      "fastrtps",
+      "libcurl",
+      "librealsense2",
+      "warehouse"
+    ],
+    "last_check": "2025-07-23 13:18:11"
+  },
+  {
+    "require_pkg": "orocos-kdl-devel",
+    "system_pkg": "orocos-kdl-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "orocos",
+      "robot"
+    ],
+    "last_check": "2025-07-23 13:18:17"
+  },
+  {
+    "require_pkg": "pcl-devel",
+    "system_pkg": "pcl-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "grid",
+      "octomap",
+      "pcl",
+      "velodyne"
+    ],
+    "last_check": "2025-07-23 13:18:44"
+  },
+  {
+    "require_pkg": "pkgconfig",
+    "system_pkg": "pkgconfig",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "bondcpp",
+      "geometric",
+      "gpsd",
+      "librealsense2",
+      "lusb",
+      "moveit",
+      "ompl",
+      "qt",
+      "rviz",
+      "theora",
+      "tracetools",
+      "ublox"
+    ],
+    "last_check": "2025-07-23 13:18:47"
+  },
+  {
+    "require_pkg": "protobuf-devel",
+    "system_pkg": "protobuf-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer",
+      "robot"
+    ],
+    "last_check": "2025-07-23 13:19:15"
+  },
+  {
+    "require_pkg": "pybind11-devel",
+    "system_pkg": "pybind11-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "pybind11"
+    ],
+    "last_check": "2025-07-23 13:19:20"
+  },
+  {
+    "require_pkg": "python3",
+    "system_pkg": "python3",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "fastrtps",
+      "generate",
+      "moveit",
+      "rclcpp"
+    ],
+    "last_check": "2025-07-23 13:19:23"
+  },
+  {
+    "require_pkg": "python3-catkin_pkg",
+    "system_pkg": "python3-catkin_pkg",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament"
+    ],
+    "last_check": "2025-07-23 13:19:26"
+  },
+  {
+    "require_pkg": "python3-devel",
+    "system_pkg": "python3-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "eigenpy",
+      "mavlink"
+    ],
+    "last_check": "2025-07-23 13:19:29"
+  },
+  {
+    "require_pkg": "python3-empy",
+    "system_pkg": "python3-empy",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libmavconn",
+      "rcl",
+      "rcutils"
+    ],
+    "last_check": "2025-07-23 13:19:32"
+  },
+  {
+    "require_pkg": "python3-flake8",
+    "system_pkg": "python3-flake8",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament"
+    ],
+    "last_check": "2025-07-23 13:19:35"
+  },
+  {
+    "require_pkg": "python3-future",
+    "system_pkg": "python3-future",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "mavlink"
+    ],
+    "last_check": "2025-07-23 13:19:42"
+  },
+  {
+    "require_pkg": "python3-graphviz",
+    "system_pkg": "python3-graphviz",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "qt"
+    ],
+    "last_check": "2025-07-23 13:19:54"
+  },
+  {
+    "require_pkg": "python3-importlib-metadata",
+    "system_pkg": "python3-importlib-metadata",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament",
+      "launch"
+    ],
+    "last_check": "2025-07-23 13:19:57"
+  },
+  {
+    "require_pkg": "python3-importlib-resources",
+    "system_pkg": "python3-importlib-resources",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament"
+    ],
+    "last_check": "2025-07-23 13:20:00"
+  },
+  {
+    "require_pkg": "python3-jinja2",
+    "system_pkg": "python3-jinja2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "generate",
+      "rmf"
+    ],
+    "last_check": "2025-07-23 13:20:03"
+  },
+  {
+    "require_pkg": "python3-jsonschema",
+    "system_pkg": "python3-jsonschema",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rmf"
+    ],
+    "last_check": "2025-07-23 13:20:10"
+  },
+  {
+    "require_pkg": "python3-lxml",
+    "system_pkg": "python3-lxml",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "mavlink",
+      "nodl"
+    ],
+    "last_check": "2025-07-23 13:20:13"
+  },
+  {
+    "require_pkg": "python3-matplotlib",
+    "system_pkg": "python3-matplotlib",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "kobuki"
+    ],
+    "last_check": "2025-07-23 13:20:43"
+  },
+  {
+    "require_pkg": "python3-mock",
+    "system_pkg": "python3-mock",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "urdfdom"
+    ],
+    "last_check": "2025-07-23 13:20:46"
+  },
+  {
+    "require_pkg": "python3-numpy",
+    "system_pkg": "python3-numpy",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "apriltag",
+      "cv",
+      "eigenpy",
+      "rosidl",
+      "webots"
+    ],
+    "last_check": "2025-07-23 13:20:49"
+  },
+  {
+    "require_pkg": "python3-pillow",
+    "system_pkg": "python3-pillow",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "webots"
+    ],
+    "last_check": "2025-07-23 13:20:52"
+  },
+  {
+    "require_pkg": "python3-pycodestyle",
+    "system_pkg": "python3-pycodestyle",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "webots"
+    ],
+    "last_check": "2025-07-23 13:20:55"
+  },
+  {
+    "require_pkg": "python3-pykdl",
+    "system_pkg": "python3-pykdl",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "python"
+    ],
+    "last_check": "2025-07-23 13:21:01"
+  },
+  {
+    "require_pkg": "python3-pytest",
+    "system_pkg": "python3-pytest",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament",
+      "camera",
+      "demo",
+      "domain",
+      "examples",
+      "gc",
+      "generate",
+      "joint",
+      "key",
+      "launch",
+      "nao",
+      "nav2",
+      "neo",
+      "nodl",
+      "py",
+      "quality",
+      "r2r",
+      "rcgcd",
+      "rcgcrd",
+      "rclpy",
+      "resource",
+      "rmf",
+      "robot",
+      "ros2",
+      "ros2cli",
+      "ros2component",
+      "ros2doctor",
+      "ros2lifecycle",
+      "ros2node",
+      "ros2param",
+      "ros2service",
+      "ros2test",
+      "ros2topic",
+      "rosbag2",
+      "rosidl",
+      "rpyutils",
+      "rqt",
+      "sensor",
+      "splsm",
+      "tf",
+      "tf2",
+      "topic",
+      "tracetools",
+      "turtle",
+      "twist",
+      "webots"
+    ],
+    "last_check": "2025-07-23 13:21:04"
+  },
+  {
+    "require_pkg": "python3-pytest-mock",
+    "system_pkg": "python3-pytest-mock",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament",
+      "nodl"
+    ],
+    "last_check": "2025-07-23 13:21:07"
+  },
+  {
+    "require_pkg": "python3-pytest-timeout",
+    "system_pkg": "python3-pytest-timeout",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros2cli",
+      "ros2component",
+      "ros2doctor",
+      "ros2lifecycle",
+      "ros2node",
+      "ros2param",
+      "ros2service",
+      "ros2topic"
+    ],
+    "last_check": "2025-07-23 13:21:12"
+  },
+  {
+    "require_pkg": "python3-qt5-devel",
+    "system_pkg": "python3-qt5-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "python",
+      "qt"
+    ],
+    "last_check": "2025-07-23 13:21:57"
+  },
+  {
+    "require_pkg": "python3-requests",
+    "system_pkg": "python3-requests",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "camera"
+    ],
+    "last_check": "2025-07-23 13:22:00"
+  },
+  {
+    "require_pkg": "python3-setuptools",
+    "system_pkg": "python3-setuptools",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ament",
+      "angles",
+      "py",
+      "rqt"
+    ],
+    "last_check": "2025-07-23 13:22:03"
+  },
+  {
+    "require_pkg": "python3-sphinx",
+    "system_pkg": "python3-sphinx",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "cartographer"
+    ],
+    "last_check": "2025-07-23 13:22:06"
+  },
+  {
+    "require_pkg": "python3-typeguard",
+    "system_pkg": "python3-typeguard",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "generate"
+    ],
+    "last_check": "2025-07-23 13:22:12"
+  },
+  {
+    "require_pkg": "python3-yaml",
+    "system_pkg": "python3-yaml",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "generate",
+      "launch",
+      "nav2",
+      "xacro"
+    ],
+    "last_check": "2025-07-23 13:22:15"
+  },
+  {
+    "require_pkg": "qhull-devel",
+    "system_pkg": "qhull-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "geometric"
+    ],
+    "last_check": "2025-07-23 13:22:18"
+  },
+  {
+    "require_pkg": "qt5-qtbase",
+    "system_pkg": "qt5-qtbase",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "octomap",
+      "octovis",
+      "slam",
+      "swri"
+    ],
+    "last_check": "2025-07-23 13:22:21"
+  },
+  {
+    "require_pkg": "qt5-qtbase-devel",
+    "system_pkg": "qt5-qtbase-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "find",
+      "grid",
+      "moveit",
+      "nav2",
+      "octomap",
+      "octovis",
+      "python",
+      "qt",
+      "ros",
+      "rqt",
+      "rviz",
+      "rviz2",
+      "slam",
+      "swri",
+      "turtlesim"
+    ],
+    "last_check": "2025-07-23 13:22:24"
+  },
+  {
+    "require_pkg": "qt5-qtbase-gui",
+    "system_pkg": "qt5-qtbase-gui",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "octomap",
+      "swri"
+    ],
+    "last_check": "2025-07-23 13:22:27"
+  },
+  {
+    "require_pkg": "range-v3-devel",
+    "system_pkg": "range-v3-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "pick",
+      "rsl"
+    ],
+    "last_check": "2025-07-23 13:22:33"
+  },
+  {
+    "require_pkg": "spdlog-devel",
+    "system_pkg": "spdlog-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "rcl",
+      "spdlog"
+    ],
+    "last_check": "2025-07-23 13:22:36"
+  },
+  {
+    "require_pkg": "sqlite-devel",
+    "system_pkg": "sqlite-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "sqlite3",
+      "warehouse"
+    ],
+    "last_check": "2025-07-23 13:22:42"
+  },
+  {
+    "require_pkg": "subversion",
+    "system_pkg": "subversion",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "qpoases"
+    ],
+    "last_check": "2025-07-23 13:22:56"
+  },
+  {
+    "require_pkg": "suitesparse-devel",
+    "system_pkg": "suitesparse-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "libg2o",
+      "robot",
+      "slam"
+    ],
+    "last_check": "2025-07-23 13:23:04"
+  },
+  {
+    "require_pkg": "tbb-devel",
+    "system_pkg": "tbb-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "grid",
+      "slam"
+    ],
+    "last_check": "2025-07-23 13:23:10"
+  },
+  {
+    "require_pkg": "tinyxml-devel",
+    "system_pkg": "tinyxml-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "tinyxml",
+      "urdfdom"
+    ],
+    "last_check": "2025-07-23 13:23:16"
+  },
+  {
+    "require_pkg": "tinyxml2-devel",
+    "system_pkg": "tinyxml2-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "fastrtps",
+      "tinyxml2"
+    ],
+    "last_check": "2025-07-23 13:23:19"
+  },
+  {
+    "require_pkg": "udev",
+    "system_pkg": "udev",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "librealsense2"
+    ],
+    "last_check": "2025-07-23 13:23:23"
+  },
+  {
+    "require_pkg": "yaml-cpp-devel",
+    "system_pkg": "yaml-cpp-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "grid",
+      "rcl",
+      "robot",
+      "rt",
+      "velodyne",
+      "yaml"
+    ],
+    "last_check": "2025-07-23 13:23:26"
+  },
+  {
+    "require_pkg": "zbar-devel",
+    "system_pkg": "zbar-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "zbar"
+    ],
+    "last_check": "2025-07-23 13:23:32"
+  },
+  {
+    "require_pkg": "zlib-devel",
+    "system_pkg": "zlib-devel",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "find"
+    ],
+    "last_check": "2025-07-23 13:23:35"
+  }
+]

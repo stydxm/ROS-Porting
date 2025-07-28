@@ -1,0 +1,2202 @@
+[
+  {
+    "require_pkg": "ca-certificates",
+    "system_pkg": "ca-certificates",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ros2doctor"
+    ],
+    "last_check": "2025-07-28 16:20:29"
+  },
+  {
+    "require_pkg": "catch2",
+    "system_pkg": "catch2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-rcl-logging-spdlog"
+    ],
+    "last_check": "2025-07-28 16:20:29"
+  },
+  {
+    "require_pkg": "cmake",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:31"
+  },
+  {
+    "require_pkg": "cmake-data",
+    "system_pkg": "cmake-data",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:31"
+  },
+  {
+    "require_pkg": "cppcheck",
+    "system_pkg": "cppcheck",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cppcheck"
+    ],
+    "last_check": "2025-07-28 16:20:31"
+  },
+  {
+    "require_pkg": "debconf-2.0",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-ros2doctor",
+      "ros-jazzy-rti-connext-dds-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:20:33"
+  },
+  {
+    "require_pkg": "docutils-common",
+    "system_pkg": "docutils-common",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:33"
+  },
+  {
+    "require_pkg": "dpkg",
+    "system_pkg": "dpkg",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:33"
+  },
+  {
+    "require_pkg": "gcc-14-base",
+    "system_pkg": "gcc-14-base",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-rcutils"
+    ],
+    "last_check": "2025-07-28 16:20:33"
+  },
+  {
+    "require_pkg": "google-mock",
+    "system_pkg": "google-mock",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-gmock"
+    ],
+    "last_check": "2025-07-28 16:20:33"
+  },
+  {
+    "require_pkg": "googletest",
+    "system_pkg": "googletest",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-gmock",
+      "ros-jazzy-ament-cmake-gtest"
+    ],
+    "last_check": "2025-07-28 16:20:33"
+  },
+  {
+    "require_pkg": "init-system-helpers",
+    "system_pkg": "init-system-helpers",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:33"
+  },
+  {
+    "require_pkg": "libacl1",
+    "system_pkg": "libacl1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:34"
+  },
+  {
+    "require_pkg": "libarchive13t64",
+    "system_pkg": "libarchive13t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:34"
+  },
+  {
+    "require_pkg": "libatomic1",
+    "system_pkg": "libatomic1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-rcutils"
+    ],
+    "last_check": "2025-07-28 16:20:34"
+  },
+  {
+    "require_pkg": "libblas.so.3",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-rosidl-generator-py"
+    ],
+    "last_check": "2025-07-28 16:20:35"
+  },
+  {
+    "require_pkg": "libbrotli1",
+    "system_pkg": "libbrotli1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:35"
+  },
+  {
+    "require_pkg": "libbz2-1.0",
+    "system_pkg": "libbz2-1.0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:35"
+  },
+  {
+    "require_pkg": "libc-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:37"
+  },
+  {
+    "require_pkg": "libc6",
+    "system_pkg": "libc6",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-action-msgs",
+      "ros-jazzy-actionlib-msgs",
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-ament-cppcheck",
+      "ros-jazzy-ament-index-cpp",
+      "ros-jazzy-ament-xmllint",
+      "ros-jazzy-builtin-interfaces",
+      "ros-jazzy-class-loader",
+      "ros-jazzy-composition-interfaces",
+      "ros-jazzy-diagnostic-msgs",
+      "ros-jazzy-fastcdr",
+      "ros-jazzy-geometry-msgs",
+      "ros-jazzy-launch",
+      "ros-jazzy-libstatistics-collector",
+      "ros-jazzy-libyaml-vendor",
+      "ros-jazzy-lifecycle-msgs",
+      "ros-jazzy-nav-msgs",
+      "ros-jazzy-rcl",
+      "ros-jazzy-rcl-action",
+      "ros-jazzy-rcl-interfaces",
+      "ros-jazzy-rcl-lifecycle",
+      "ros-jazzy-rcl-logging-interface",
+      "ros-jazzy-rcl-logging-spdlog",
+      "ros-jazzy-rcl-yaml-param-parser",
+      "ros-jazzy-rclcpp",
+      "ros-jazzy-rclcpp-action",
+      "ros-jazzy-rclcpp-components",
+      "ros-jazzy-rclcpp-lifecycle",
+      "ros-jazzy-rclpy",
+      "ros-jazzy-rcpputils",
+      "ros-jazzy-rcutils",
+      "ros-jazzy-rmw",
+      "ros-jazzy-rmw-connextdds-common",
+      "ros-jazzy-rmw-dds-common",
+      "ros-jazzy-rmw-implementation",
+      "ros-jazzy-ros2cli",
+      "ros-jazzy-ros2doctor",
+      "ros-jazzy-rosgraph-msgs",
+      "ros-jazzy-rosidl-dynamic-typesupport",
+      "ros-jazzy-rosidl-generator-py",
+      "ros-jazzy-rosidl-runtime-c",
+      "ros-jazzy-rosidl-typesupport-c",
+      "ros-jazzy-rosidl-typesupport-cpp",
+      "ros-jazzy-rosidl-typesupport-fastrtps-cpp",
+      "ros-jazzy-sensor-msgs",
+      "ros-jazzy-service-msgs",
+      "ros-jazzy-shape-msgs",
+      "ros-jazzy-sros2",
+      "ros-jazzy-statistics-msgs",
+      "ros-jazzy-std-msgs",
+      "ros-jazzy-std-srvs",
+      "ros-jazzy-stereo-msgs",
+      "ros-jazzy-tracetools",
+      "ros-jazzy-trajectory-msgs",
+      "ros-jazzy-type-description-interfaces",
+      "ros-jazzy-uncrustify-vendor",
+      "ros-jazzy-unique-identifier-msgs",
+      "ros-jazzy-visualization-msgs"
+    ],
+    "last_check": "2025-07-28 16:20:38"
+  },
+  {
+    "require_pkg": "libcap2",
+    "system_pkg": "libcap2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:38"
+  },
+  {
+    "require_pkg": "libcom-err2",
+    "system_pkg": "libcom-err2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:38"
+  },
+  {
+    "require_pkg": "libconsole-bridge-dev",
+    "system_pkg": "libconsole-bridge-dev",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-class-loader",
+      "ros-jazzy-console-bridge-vendor"
+    ],
+    "last_check": "2025-07-28 16:20:38"
+  },
+  {
+    "require_pkg": "libconsole-bridge1.0",
+    "system_pkg": "libconsole-bridge1.0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-class-loader",
+      "ros-jazzy-rclcpp-components"
+    ],
+    "last_check": "2025-07-28 16:20:38"
+  },
+  {
+    "require_pkg": "libcrypt1",
+    "system_pkg": "libcrypt1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:38"
+  },
+  {
+    "require_pkg": "libcurl4t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:39"
+  },
+  {
+    "require_pkg": "libdb5.3t64",
+    "system_pkg": "libdb5.3t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:39"
+  },
+  {
+    "require_pkg": "libexpat1",
+    "system_pkg": "libexpat1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-actionlib-msgs",
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libexpat1-dev",
+    "system_pkg": "libexpat1-dev",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libffi8",
+    "system_pkg": "libffi8",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libfmt-dev",
+    "system_pkg": "libfmt-dev",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-rcl-logging-spdlog"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libfmt9",
+    "system_pkg": "libfmt9",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-rcl-logging-spdlog"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libgcc-s1",
+    "system_pkg": "libgcc-s1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-action-msgs",
+      "ros-jazzy-actionlib-msgs",
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cppcheck",
+      "ros-jazzy-ament-index-cpp",
+      "ros-jazzy-class-loader",
+      "ros-jazzy-composition-interfaces",
+      "ros-jazzy-diagnostic-msgs",
+      "ros-jazzy-fastcdr",
+      "ros-jazzy-geometry-msgs",
+      "ros-jazzy-libstatistics-collector",
+      "ros-jazzy-lifecycle-msgs",
+      "ros-jazzy-nav-msgs",
+      "ros-jazzy-rcl-interfaces",
+      "ros-jazzy-rcl-logging-spdlog",
+      "ros-jazzy-rclcpp",
+      "ros-jazzy-rclcpp-action",
+      "ros-jazzy-rclcpp-components",
+      "ros-jazzy-rclcpp-lifecycle",
+      "ros-jazzy-rclpy",
+      "ros-jazzy-rcpputils",
+      "ros-jazzy-rmw-connextdds-common",
+      "ros-jazzy-rmw-dds-common",
+      "ros-jazzy-rmw-implementation",
+      "ros-jazzy-rosidl-generator-py",
+      "ros-jazzy-rosidl-typesupport-c",
+      "ros-jazzy-sensor-msgs",
+      "ros-jazzy-shape-msgs",
+      "ros-jazzy-sros2",
+      "ros-jazzy-statistics-msgs",
+      "ros-jazzy-std-msgs",
+      "ros-jazzy-std-srvs",
+      "ros-jazzy-stereo-msgs",
+      "ros-jazzy-trajectory-msgs",
+      "ros-jazzy-type-description-interfaces",
+      "ros-jazzy-uncrustify-vendor",
+      "ros-jazzy-visualization-msgs"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libgcrypt20",
+    "system_pkg": "libgcrypt20",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libgmp10",
+    "system_pkg": "libgmp10",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:40"
+  },
+  {
+    "require_pkg": "libgnutls30",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:42"
+  },
+  {
+    "require_pkg": "libgnutls30t64",
+    "system_pkg": "libgnutls30t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:43"
+  },
+  {
+    "require_pkg": "libgpg-error0",
+    "system_pkg": "libgpg-error0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:43"
+  },
+  {
+    "require_pkg": "libgssapi-krb5-2",
+    "system_pkg": "libgssapi-krb5-2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:43"
+  },
+  {
+    "require_pkg": "libgtest-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-gtest"
+    ],
+    "last_check": "2025-07-28 16:20:45"
+  },
+  {
+    "require_pkg": "libhogweed6",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:47"
+  },
+  {
+    "require_pkg": "libhogweed6t64",
+    "system_pkg": "libhogweed6t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:47"
+  },
+  {
+    "require_pkg": "libicu74",
+    "system_pkg": "libicu74",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:47"
+  },
+  {
+    "require_pkg": "libidn2-0",
+    "system_pkg": "libidn2-0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:47"
+  },
+  {
+    "require_pkg": "libjs-jquery",
+    "system_pkg": "libjs-jquery",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libjs-sphinxdoc",
+    "system_pkg": "libjs-sphinxdoc",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libjs-underscore",
+    "system_pkg": "libjs-underscore",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libjsoncpp25",
+    "system_pkg": "libjsoncpp25",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libk5crypto3",
+    "system_pkg": "libk5crypto3",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libkeyutils1",
+    "system_pkg": "libkeyutils1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libkmod2",
+    "system_pkg": "libkmod2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libkrb5-3",
+    "system_pkg": "libkrb5-3",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "libkrb5support0",
+    "system_pkg": "libkrb5support0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:48"
+  },
+  {
+    "require_pkg": "liblapack.so.3",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-rosidl-generator-py"
+    ],
+    "last_check": "2025-07-28 16:20:50"
+  },
+  {
+    "require_pkg": "libldap2",
+    "system_pkg": "libldap2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:50"
+  },
+  {
+    "require_pkg": "liblttng-ctl0t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:51"
+  },
+  {
+    "require_pkg": "liblttng-ust-common1t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:52"
+  },
+  {
+    "require_pkg": "liblttng-ust-ctl5t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:54"
+  },
+  {
+    "require_pkg": "liblttng-ust-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:56"
+  },
+  {
+    "require_pkg": "liblttng-ust-python-agent1t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:57"
+  },
+  {
+    "require_pkg": "liblttng-ust1t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:58"
+  },
+  {
+    "require_pkg": "liblz4-1",
+    "system_pkg": "liblz4-1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:20:59"
+  },
+  {
+    "require_pkg": "liblzma5",
+    "system_pkg": "liblzma5",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:20:59"
+  },
+  {
+    "require_pkg": "libmd0",
+    "system_pkg": "libmd0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:59"
+  },
+  {
+    "require_pkg": "libncursesw6",
+    "system_pkg": "libncursesw6",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:20:59"
+  },
+  {
+    "require_pkg": "libnettle8",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:01"
+  },
+  {
+    "require_pkg": "libnettle8t64",
+    "system_pkg": "libnettle8t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:01"
+  },
+  {
+    "require_pkg": "libnghttp2-14",
+    "system_pkg": "libnghttp2-14",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:01"
+  },
+  {
+    "require_pkg": "libnuma1",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:03"
+  },
+  {
+    "require_pkg": "libp11-kit0",
+    "system_pkg": "libp11-kit0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:04"
+  },
+  {
+    "require_pkg": "libpcre2-8-0",
+    "system_pkg": "libpcre2-8-0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:04"
+  },
+  {
+    "require_pkg": "libpkgconf3",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-libyaml-vendor"
+    ],
+    "last_check": "2025-07-28 16:21:06"
+  },
+  {
+    "require_pkg": "libpopt0",
+    "system_pkg": "libpopt0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:06"
+  },
+  {
+    "require_pkg": "libproc2-0",
+    "system_pkg": "libproc2-0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:06"
+  },
+  {
+    "require_pkg": "libpsl5t64",
+    "system_pkg": "libpsl5t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:06"
+  },
+  {
+    "require_pkg": "libpython3-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:21:09"
+  },
+  {
+    "require_pkg": "libpython3-stdlib",
+    "system_pkg": "libpython3-stdlib",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:09"
+  },
+  {
+    "require_pkg": "libpython3.12-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:21:11"
+  },
+  {
+    "require_pkg": "libpython3.12-minimal",
+    "system_pkg": "libpython3.12-minimal",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:11"
+  },
+  {
+    "require_pkg": "libpython3.12-stdlib",
+    "system_pkg": "libpython3.12-stdlib",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-actionlib-msgs",
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:21:11"
+  },
+  {
+    "require_pkg": "libpython3.12t64",
+    "system_pkg": "libpython3.12t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-action-msgs",
+      "ros-jazzy-actionlib-msgs",
+      "ros-jazzy-builtin-interfaces",
+      "ros-jazzy-composition-interfaces",
+      "ros-jazzy-diagnostic-msgs",
+      "ros-jazzy-geometry-msgs",
+      "ros-jazzy-lifecycle-msgs",
+      "ros-jazzy-nav-msgs",
+      "ros-jazzy-python-cmake-module",
+      "ros-jazzy-rcl-interfaces",
+      "ros-jazzy-rmw-dds-common",
+      "ros-jazzy-rosgraph-msgs",
+      "ros-jazzy-sensor-msgs",
+      "ros-jazzy-service-msgs",
+      "ros-jazzy-shape-msgs",
+      "ros-jazzy-statistics-msgs",
+      "ros-jazzy-std-msgs",
+      "ros-jazzy-std-srvs",
+      "ros-jazzy-stereo-msgs",
+      "ros-jazzy-trajectory-msgs",
+      "ros-jazzy-type-description-interfaces",
+      "ros-jazzy-unique-identifier-msgs",
+      "ros-jazzy-visualization-msgs"
+    ],
+    "last_check": "2025-07-28 16:21:11"
+  },
+  {
+    "require_pkg": "libreadline8t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:12"
+  },
+  {
+    "require_pkg": "librhash0",
+    "system_pkg": "librhash0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:13"
+  },
+  {
+    "require_pkg": "librtmp1",
+    "system_pkg": "librtmp1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:13"
+  },
+  {
+    "require_pkg": "libsasl2-2",
+    "system_pkg": "libsasl2-2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:13"
+  },
+  {
+    "require_pkg": "libsasl2-modules-db",
+    "system_pkg": "libsasl2-modules-db",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:13"
+  },
+  {
+    "require_pkg": "libselinux1",
+    "system_pkg": "libselinux1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:13"
+  },
+  {
+    "require_pkg": "libspdlog-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-rcl-logging-spdlog",
+      "ros-jazzy-spdlog-vendor"
+    ],
+    "last_check": "2025-07-28 16:21:15"
+  },
+  {
+    "require_pkg": "libspdlog1.12",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-rcl-logging-spdlog"
+    ],
+    "last_check": "2025-07-28 16:21:17"
+  },
+  {
+    "require_pkg": "libspdlog1.12-fmt9",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-rcl-logging-spdlog"
+    ],
+    "last_check": "2025-07-28 16:21:19"
+  },
+  {
+    "require_pkg": "libsqlite3-0",
+    "system_pkg": "libsqlite3-0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libssh-4",
+    "system_pkg": "libssh-4",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libssl3t64",
+    "system_pkg": "libssl3t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-ros2doctor",
+      "ros-jazzy-sros2",
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libstdc++6",
+    "system_pkg": "libstdc++6",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-action-msgs",
+      "ros-jazzy-actionlib-msgs",
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cppcheck",
+      "ros-jazzy-ament-index-cpp",
+      "ros-jazzy-class-loader",
+      "ros-jazzy-composition-interfaces",
+      "ros-jazzy-diagnostic-msgs",
+      "ros-jazzy-fastcdr",
+      "ros-jazzy-geometry-msgs",
+      "ros-jazzy-libstatistics-collector",
+      "ros-jazzy-lifecycle-msgs",
+      "ros-jazzy-nav-msgs",
+      "ros-jazzy-rcl-interfaces",
+      "ros-jazzy-rcl-logging-spdlog",
+      "ros-jazzy-rclcpp",
+      "ros-jazzy-rclcpp-action",
+      "ros-jazzy-rclcpp-components",
+      "ros-jazzy-rclcpp-lifecycle",
+      "ros-jazzy-rclpy",
+      "ros-jazzy-rcpputils",
+      "ros-jazzy-rmw-connextdds",
+      "ros-jazzy-rmw-connextdds-common",
+      "ros-jazzy-rmw-dds-common",
+      "ros-jazzy-rmw-implementation",
+      "ros-jazzy-rosidl-typesupport-c",
+      "ros-jazzy-rosidl-typesupport-cpp",
+      "ros-jazzy-rosidl-typesupport-fastrtps-c",
+      "ros-jazzy-rosidl-typesupport-fastrtps-cpp",
+      "ros-jazzy-sensor-msgs",
+      "ros-jazzy-shape-msgs",
+      "ros-jazzy-statistics-msgs",
+      "ros-jazzy-std-msgs",
+      "ros-jazzy-std-srvs",
+      "ros-jazzy-stereo-msgs",
+      "ros-jazzy-tracetools",
+      "ros-jazzy-trajectory-msgs",
+      "ros-jazzy-type-description-interfaces",
+      "ros-jazzy-uncrustify-vendor",
+      "ros-jazzy-visualization-msgs"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libsystemd0",
+    "system_pkg": "libsystemd0",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libtasn1-6",
+    "system_pkg": "libtasn1-6",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libtinfo6",
+    "system_pkg": "libtinfo6",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libtinyxml2-10",
+    "system_pkg": "libtinyxml2-10",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cppcheck",
+      "ros-jazzy-tinyxml2-vendor"
+    ],
+    "last_check": "2025-07-28 16:21:20"
+  },
+  {
+    "require_pkg": "libtinyxml2-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tinyxml2-vendor"
+    ],
+    "last_check": "2025-07-28 16:21:22"
+  },
+  {
+    "require_pkg": "libunistring5",
+    "system_pkg": "libunistring5",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:23"
+  },
+  {
+    "require_pkg": "liburcu-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:25"
+  },
+  {
+    "require_pkg": "liburcu8t64",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:27"
+  },
+  {
+    "require_pkg": "libuuid1",
+    "system_pkg": "libuuid1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:27"
+  },
+  {
+    "require_pkg": "libuv1t64",
+    "system_pkg": "libuv1t64",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:27"
+  },
+  {
+    "require_pkg": "libxml2",
+    "system_pkg": "libxml2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-xmllint",
+      "ros-jazzy-sros2",
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:27"
+  },
+  {
+    "require_pkg": "libxml2-utils",
+    "system_pkg": "libxml2-utils",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-xmllint"
+    ],
+    "last_check": "2025-07-28 16:21:27"
+  },
+  {
+    "require_pkg": "libxslt1.1",
+    "system_pkg": "libxslt1.1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:21:27"
+  },
+  {
+    "require_pkg": "libyaml-0-2",
+    "system_pkg": "libyaml-0-2",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-launch",
+      "ros-jazzy-libyaml-vendor",
+      "ros-jazzy-rcl",
+      "ros-jazzy-rcl-yaml-param-parser"
+    ],
+    "last_check": "2025-07-28 16:21:28"
+  },
+  {
+    "require_pkg": "libyaml-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-libyaml-vendor",
+      "ros-jazzy-rcl",
+      "ros-jazzy-rcl-yaml-param-parser"
+    ],
+    "last_check": "2025-07-28 16:21:30"
+  },
+  {
+    "require_pkg": "libzstd1",
+    "system_pkg": "libzstd1",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:30"
+  },
+  {
+    "require_pkg": "lsb-release",
+    "system_pkg": "lsb-release",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ros2doctor"
+    ],
+    "last_check": "2025-07-28 16:21:30"
+  },
+  {
+    "require_pkg": "lttng-tools",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:21:32"
+  },
+  {
+    "require_pkg": "mime-support",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:34"
+  },
+  {
+    "require_pkg": "netbase",
+    "system_pkg": "netbase",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:34"
+  },
+  {
+    "require_pkg": "openssl",
+    "system_pkg": "openssl",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ros2doctor"
+    ],
+    "last_check": "2025-07-28 16:21:34"
+  },
+  {
+    "require_pkg": "pkg-config",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-libyaml-vendor"
+    ],
+    "last_check": "2025-07-28 16:21:37"
+  },
+  {
+    "require_pkg": "pkgconf",
+    "system_pkg": "pkgconf",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-libyaml-vendor"
+    ],
+    "last_check": "2025-07-28 16:21:37"
+  },
+  {
+    "require_pkg": "pkgconf-bin",
+    "system_pkg": "pkgconf-bin",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-libyaml-vendor"
+    ],
+    "last_check": "2025-07-28 16:21:37"
+  },
+  {
+    "require_pkg": "procps",
+    "system_pkg": "procps",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:37"
+  },
+  {
+    "require_pkg": "pydocstyle",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-pep257"
+    ],
+    "last_check": "2025-07-28 16:21:39"
+  },
+  {
+    "require_pkg": "python3",
+    "system_pkg": "python3",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-ament-cmake-pytest",
+      "ros-jazzy-ament-cppcheck",
+      "ros-jazzy-ament-flake8",
+      "ros-jazzy-ament-package",
+      "ros-jazzy-ament-pep257",
+      "ros-jazzy-launch",
+      "ros-jazzy-python-cmake-module",
+      "ros-jazzy-ros2cli",
+      "ros-jazzy-ros2doctor",
+      "ros-jazzy-rosidl-cli",
+      "ros-jazzy-rosidl-cmake",
+      "ros-jazzy-rosidl-generator-py",
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:21:39"
+  },
+  {
+    "require_pkg": "python3-argcomplete",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ros2cli",
+      "ros-jazzy-rosidl-cli",
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:21:41"
+  },
+  {
+    "require_pkg": "python3-catkin-pkg-modules",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-ros2doctor",
+      "ros-jazzy-ros2pkg"
+    ],
+    "last_check": "2025-07-28 16:21:43"
+  },
+  {
+    "require_pkg": "python3-cffi-backend-api-max",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:21:45"
+  },
+  {
+    "require_pkg": "python3-cffi-backend-api-min",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:21:47"
+  },
+  {
+    "require_pkg": "python3-cryptography",
+    "system_pkg": "python3-cryptography",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:21:47"
+  },
+  {
+    "require_pkg": "python3-dateutil",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:49"
+  },
+  {
+    "require_pkg": "python3-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-python-cmake-module",
+      "ros-jazzy-rosidl-generator-c",
+      "ros-jazzy-rosidl-generator-cpp",
+      "ros-jazzy-rosidl-generator-type-description",
+      "ros-jazzy-rosidl-typesupport-c",
+      "ros-jazzy-rosidl-typesupport-cpp",
+      "ros-jazzy-rosidl-typesupport-fastrtps-c",
+      "ros-jazzy-rosidl-typesupport-fastrtps-cpp",
+      "ros-jazzy-rosidl-typesupport-introspection-c",
+      "ros-jazzy-rosidl-typesupport-introspection-cpp"
+    ],
+    "last_check": "2025-07-28 16:21:51"
+  },
+  {
+    "require_pkg": "python3-docutils",
+    "system_pkg": "python3-docutils",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:21:51"
+  },
+  {
+    "require_pkg": "python3-empy",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ros2pkg",
+      "ros-jazzy-rosidl-cmake"
+    ],
+    "last_check": "2025-07-28 16:21:54"
+  },
+  {
+    "require_pkg": "python3-flake8",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:21:56"
+  },
+  {
+    "require_pkg": "python3-flake8-builtins",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:21:58"
+  },
+  {
+    "require_pkg": "python3-flake8-comprehensions",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:00"
+  },
+  {
+    "require_pkg": "python3-flake8-docstrings",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:02"
+  },
+  {
+    "require_pkg": "python3-flake8-import-order",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:04"
+  },
+  {
+    "require_pkg": "python3-flake8-quotes",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:06"
+  },
+  {
+    "require_pkg": "python3-importlib-metadata",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-copyright",
+      "ros-jazzy-ament-package",
+      "ros-jazzy-launch",
+      "ros-jazzy-launch-ros",
+      "ros-jazzy-osrf-pycommon",
+      "ros-jazzy-ros2cli",
+      "ros-jazzy-ros2doctor",
+      "ros-jazzy-rosidl-cli"
+    ],
+    "last_check": "2025-07-28 16:22:09"
+  },
+  {
+    "require_pkg": "python3-iniconfig",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-pytest"
+    ],
+    "last_check": "2025-07-28 16:22:11"
+  },
+  {
+    "require_pkg": "python3-lark",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-launch",
+      "ros-jazzy-rosidl-parser"
+    ],
+    "last_check": "2025-07-28 16:22:13"
+  },
+  {
+    "require_pkg": "python3-lxml",
+    "system_pkg": "python3-lxml",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:22:13"
+  },
+  {
+    "require_pkg": "python3-mccabe",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:15"
+  },
+  {
+    "require_pkg": "python3-minimal",
+    "system_pkg": "python3-minimal",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-ament-package",
+      "ros-jazzy-ros2pkg",
+      "ros-jazzy-sros2"
+    ],
+    "last_check": "2025-07-28 16:22:15"
+  },
+  {
+    "require_pkg": "python3-more-itertools",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-package"
+    ],
+    "last_check": "2025-07-28 16:22:17"
+  },
+  {
+    "require_pkg": "python3-numpy",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ros2topic",
+      "ros-jazzy-rosidl-generator-py",
+      "ros-jazzy-rosidl-runtime-py"
+    ],
+    "last_check": "2025-07-28 16:22:20"
+  },
+  {
+    "require_pkg": "python3-packaging",
+    "system_pkg": "python3-packaging",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-pytest",
+      "ros-jazzy-ros2cli"
+    ],
+    "last_check": "2025-07-28 16:22:20"
+  },
+  {
+    "require_pkg": "python3-pkg-resources",
+    "system_pkg": "python3-pkg-resources",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cppcheck",
+      "ros-jazzy-ament-flake8",
+      "ros-jazzy-ament-package",
+      "ros-jazzy-ros2cli",
+      "ros-jazzy-ros2pkg",
+      "ros-jazzy-rosidl-generator-py"
+    ],
+    "last_check": "2025-07-28 16:22:20"
+  },
+  {
+    "require_pkg": "python3-pluggy",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-pytest"
+    ],
+    "last_check": "2025-07-28 16:22:22"
+  },
+  {
+    "require_pkg": "python3-psutil",
+    "system_pkg": "python3-psutil",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ros2cli",
+      "ros-jazzy-ros2doctor"
+    ],
+    "last_check": "2025-07-28 16:22:22"
+  },
+  {
+    "require_pkg": "python3-pycodestyle",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:24"
+  },
+  {
+    "require_pkg": "python3-pydocstyle",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8",
+      "ros-jazzy-ament-pep257"
+    ],
+    "last_check": "2025-07-28 16:22:26"
+  },
+  {
+    "require_pkg": "python3-pyflakes",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:29"
+  },
+  {
+    "require_pkg": "python3-pygments",
+    "system_pkg": "python3-pygments",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cppcheck"
+    ],
+    "last_check": "2025-07-28 16:22:29"
+  },
+  {
+    "require_pkg": "python3-pyparsing",
+    "system_pkg": "python3-pyparsing",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:29"
+  },
+  {
+    "require_pkg": "python3-pytest",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-pytest",
+      "ros-jazzy-launch-testing"
+    ],
+    "last_check": "2025-07-28 16:22:31"
+  },
+  {
+    "require_pkg": "python3-roman",
+    "system_pkg": "python3-roman",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:31"
+  },
+  {
+    "require_pkg": "python3-rosdistro-modules",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ros2doctor"
+    ],
+    "last_check": "2025-07-28 16:22:32"
+  },
+  {
+    "require_pkg": "python3-rospkg-modules",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ros2doctor"
+    ],
+    "last_check": "2025-07-28 16:22:34"
+  },
+  {
+    "require_pkg": "python3-setuptools",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8",
+      "ros-jazzy-ament-package",
+      "ros-jazzy-ros2doctor"
+    ],
+    "last_check": "2025-07-28 16:22:36"
+  },
+  {
+    "require_pkg": "python3-six",
+    "system_pkg": "python3-six",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:36"
+  },
+  {
+    "require_pkg": "python3-snowballstemmer",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:38"
+  },
+  {
+    "require_pkg": "python3-supported-min",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-cmake-pytest",
+      "ros-jazzy-ament-flake8"
+    ],
+    "last_check": "2025-07-28 16:22:40"
+  },
+  {
+    "require_pkg": "python3-yaml",
+    "system_pkg": "python3-yaml",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-launch",
+      "ros-jazzy-launch-ros",
+      "ros-jazzy-rclpy",
+      "ros-jazzy-ros2doctor",
+      "ros-jazzy-ros2service",
+      "ros-jazzy-ros2topic",
+      "ros-jazzy-rosidl-runtime-py"
+    ],
+    "last_check": "2025-07-28 16:22:40"
+  },
+  {
+    "require_pkg": "python3-zipp",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-ament-package"
+    ],
+    "last_check": "2025-07-28 16:22:42"
+  },
+  {
+    "require_pkg": "python3.12",
+    "system_pkg": "python3.12",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core",
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:22:43"
+  },
+  {
+    "require_pkg": "python3.12-dev",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:22:45"
+  },
+  {
+    "require_pkg": "python3.12-minimal",
+    "system_pkg": "python3.12-minimal",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:45"
+  },
+  {
+    "require_pkg": "readline-common",
+    "system_pkg": "readline-common",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:45"
+  },
+  {
+    "require_pkg": "rti-connext-dds-6.0.1",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-rti-connext-dds-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:22:46"
+  },
+  {
+    "require_pkg": "sed",
+    "system_pkg": "sed",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:47"
+  },
+  {
+    "require_pkg": "sgml-base",
+    "system_pkg": "sgml-base",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:47"
+  },
+  {
+    "require_pkg": "tar",
+    "system_pkg": "tar",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:47"
+  },
+  {
+    "require_pkg": "tzdata",
+    "system_pkg": "tzdata",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:47"
+  },
+  {
+    "require_pkg": "uncrustify",
+    "system_pkg": "unknown",
+    "install_verify": "y",
+    "search_require": "y",
+    "miss": "unknown",
+    "required_by": [
+      "ros-jazzy-uncrustify-vendor"
+    ],
+    "last_check": "2025-07-28 16:22:49"
+  },
+  {
+    "require_pkg": "uuid-dev",
+    "system_pkg": "uuid-dev",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-tracetools"
+    ],
+    "last_check": "2025-07-28 16:22:49"
+  },
+  {
+    "require_pkg": "xml-core",
+    "system_pkg": "xml-core",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:49"
+  },
+  {
+    "require_pkg": "zlib1g",
+    "system_pkg": "zlib1g",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-actionlib-msgs",
+      "ros-jazzy-ament-cmake",
+      "ros-jazzy-ament-cmake-core"
+    ],
+    "last_check": "2025-07-28 16:22:49"
+  },
+  {
+    "require_pkg": "zlib1g-dev",
+    "system_pkg": "zlib1g-dev",
+    "install_verify": "y",
+    "search_require": "n",
+    "miss": "n",
+    "required_by": [
+      "ros-jazzy-python-cmake-module"
+    ],
+    "last_check": "2025-07-28 16:22:49"
+  }
+]

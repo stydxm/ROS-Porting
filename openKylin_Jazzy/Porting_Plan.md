@@ -1,22 +1,105 @@
-本方案聚焦于达成如下目标：
+# openkylin 方案说明
 
-**在 openkylin 2.0 sp1 x86 上移植 ROS Jazzy Desktop 变体**
+# 背景
 
-## rosdep 说明
+本方案聚焦于在 openkylin 2.0 sp1 x86 上移植 ROS Jazzy Desktop 变体。主要是说明如何通过 ROS 官方工具链去对软件包进行构建。
 
-### 验证
+本方案分为两个部分， 第一个部分是使用 colcon 去进行软件包构建正确性的验证，另一部分是自动化构建 deb 软件包以及发布。
 
-更进一步的调研，根据这一[部分]([https://wiki.ros.org/ROS/EnvironmentVariables?utm_source=chatgpt.com#ROS_OS_OVERRIDE:~:text=that language's bindings.-,ROS_OS_OVERRIDE,-Format%3A "OS_NAME%3AOS_VERSION_STRING](https://wiki.ros.org/ROS/EnvironmentVariables?utm_source=chatgpt.com#ROS_OS_OVERRIDE:~:text=that%20language%27s%20bindings.-,ROS_OS_OVERRIDE,-Format%3A%20%22OS_NAME%3AOS_VERSION_STRING))的内容我们可以知道说，在 ROS 非官方支持的发行版中使用 ROS 官方的工具链我们可以尝试使用：`export ROS_OS_OVERRIDE=` 来让 openkylin 伪装成 ubuntu，这样或许可以尝试避免在 openeuler 上那样去移植 rosdep 的问题。
+本文主要是记录我们遇到问题以及如何解决以及移植的全过程。
 
-我们已经成功的验证可以通过指定 `ROS_OS_OVERRIDE` 该变量去实现让系统伪装成 ubuntu：
+# Colcon 验证
+
+我们的验证思路是根据官方给的[变体](https://www.ros.org/reps/rep-2001.html#jazzy-jalisco-may-2024-may-2029:~:text=perception%2C%20simulation%2C%20ros_ign_gazebo_demos%5D-,Jazzy%20Jalisco%20(May%202024%20%2D%20May%202029),-ROS%20Core)，也就是如下变体：
+
+- [Jazzy Jalisco (May 2024 - May 2029)](https://www.ros.org/reps/rep-2001.html#jazzy-jalisco-may-2024-may-2029)
+    - [ROS Core](https://www.ros.org/reps/rep-2001.html#id32)
+    - [ROS Base](https://www.ros.org/reps/rep-2001.html#id33)
+    - [Desktop](https://www.ros.org/reps/rep-2001.html#id34)
+    - [Perception](https://www.ros.org/reps/rep-2001.html#id35)
+    - [Simulation](https://www.ros.org/reps/rep-2001.html#id36)
+    - [Desktop Full](https://www.ros.org/reps/rep-2001.html#id37)
+
+我们决定从最基本的 ROS Core 开始去进行移植验证，再一步步的推进到 Desktop。
+
+### 源码
+
+在准备 ros_core 以及 ros_base 的源码的时候都是很顺利的使用 rosinstall 去进行获取的。也就是：
 
 ```jsx
-export ROS_OS_OVERRIDE=ubuntu:24.04:noble
+rosinstall_generator ros_core --rosdistro jazzy --deps > ros_core.repo
 ```
 
-### 存在的问题
+然后使用 vcstool 去拉取源码到 src 文件夹下面：
 
-但是这么做的话，会使得 rosdep 会把没有带 t64 的包认成缺包实际上已经安装了，这个问题暂时没有想好要怎么解决：
+```jsx
+vcs import src < ~/ros_core.repo
+```
+
+对于 ros_base 也是一样的道理，就是改一下指令：
+
+```jsx
+rosinstall_generator ros_base --rosdistro jazzy --deps > ros_base.repo
+vcs import src < ~/ros_base.repo
+```
+
+但是到了 desktop 之后就会遇到：
+
+```jsx
+➜  ~ rosinstall_generator ros_desktop --rosdistro jazzy --deps > ~/ros_desktop.repos
+The following unreleased packages/stacks will be ignored: ros_desktop
+No packages/stacks left after ignoring unreleased
+➜  ~
+```
+
+rosinstall 本来也就不是为了 ROS2 准备的，而 ROS 官方维护的 desktop 的源码清单是：`ros2.repo`
+
+也就是该[仓库](https://github.com/ros2/ros2/tree/jazzy)下的文件。
+
+所以对于 desktop 的源码获取需要：
+
+```jsx
+vcs import src < ~/ros2.repo
+```
+
+现在源码准备完了，我们就遇到了第一个问题：ROS 官方工具链并没有对 openkylin 进行支持。
+
+## rosdep
+
+所以一开始的思路是去移植工具，不过后来随着对官方工具链调研的深入，发现https://wiki.ros.org/ROS/EnvironmentVariables?utm_source=chatgpt.com#ROS_OS_OVERRIDE:~:text=that%20language%27s%20bindings.-,ROS_OS_OVERRIDE,-Format%3A%20%22OS_NAME%3AOS_VERSION_STRING了：
+
+> **ROS_OS_OVERRIDE**
+> 
+> 
+> Format: "OS_NAME:OS_VERSION_STRING:OS_CODENAME" This will force it to detect Ubuntu Bionic:
+> 
+> ```
+> export ROS_OS_OVERRIDE=ubuntu:18.04:bionic
+> ```
+> 
+> If defined, this will override the autodetection of an OS. This can be useful when debugging rosdep dependencies on alien platforms, when platforms are actually very similar and might need be forced, or of course if the autodetection is failing.
+> 
+
+也就是说，我们可以通过 `export ROS_OS_OVERRIDE` 这个变量去让 openkylin 伪装成 ubuntu，既然 openkylin 是基于 ubuntu，那就这么做理论上确实也可以。
+
+在后续我们也确实是验证了这个参数是可行的：
+
+```jsx
+(.venv) ➜  ros2_ws export ROS_OS_OVERRIDE=ubuntu:24.04:noble
+
+rosdep install -y --rosdistro jazzy --from-paths src --ignore-src \
+  --skip-keys="python3-vcstool python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-mypy"
+executing command [sudo -H apt-get install -y libncurses-dev]
+[sudo] test1 的密码：
+```
+
+rosdep 如预期的开始使用 apt 去安装依赖。
+
+这么伪装大体上是没问题的，但是也只是大体，还是有一些小问题的。
+
+### t64命名问题
+
+这么做的话，会使得 rosdep 会把没有带 t64 的包认成缺包实际上已经安装了：
 
 ```jsx
 executing command [sudo -H apt-get install -y libqt5core5t64]
@@ -28,74 +111,84 @@ ERROR: the following rosdeps failed to install
   apt: command [sudo -H apt-get install -y libqt5core5t64] failed
 ```
 
-## 构建方案
+这个问题其实也很好解决，就是通过 `--skip-keys` 这个参数告诉 rosdep 跳过这个软件包就行，回头自己手动装上。
 
-当我们解决完了缺失的系统级依赖软件包后，我们需要做的事情是调研一下 Debian 系的软件包要如何进行构建，以及对应在 ROS 上要怎么做。
+但是这样会衍生出一个新的问题，在后面 bloom 去写依赖的时候肯定是按照 t64 的包去写。这是一个问题，要么改 rosdep yaml 里的 key，要么手动改依赖名称。不过到时候构建的时候再看吧（todo）。
 
-短期内的构建目标是：ROS core 变体，[即]([https://www.ros.org/reps/rep-2001.html#jazzy-jalisco-may-2024-may-2029:~:text=2024 - May 2029](https://www.ros.org/reps/rep-2001.html#jazzy-jalisco-may-2024-may-2029:~:text=2024%20%2D%20May%202029))-,ROS%20Core,-%2D%20ros_core%3A%0A%20%20%20%20packages%3A%20%5Bament_cmake)：
-
-```jsx
-- ros_core:
-    packages: [ament_cmake, ament_cmake_auto, ament_cmake_gmock,
-               ament_cmake_gtest, ament_cmake_pytest,
-               ament_cmake_ros, ament_index_cpp,
-               ament_index_python, ament_lint_auto,
-               ament_lint_common, class_loader, common_interfaces,
-               launch, launch_ros, launch_testing,
-               launch_testing_ament_cmake, launch_testing_ros,
-               launch_xml, launch_yaml, pluginlib, rcl_lifecycle,
-               rclcpp, rclcpp_action, rclcpp_lifecycle, rclpy,
-               ros2cli_common_extensions, ros2launch,
-               ros_environment, rosidl_default_generators,
-               rosidl_default_runtime, sros2, sros2_cmake]
-    And at least one of the following rmw_implementation:
-    - Fast-RTPS: [Fast-CDR, Fast-RTPS, rmw_fastrtps]
-    - CycloneDDS: [cyclonedds, rmw_cyclonedds]
-    - Connext: [rmw_connextdds]
-```
-
-所以目前的任务是：
-
-- 验证上述 export 指令是否可行
-
-一旦我们确定上述方案可行后，我们直接根据官方给的方案进行构建即可。
-
-但是我们目前还没有确定的内容是我们在本地要如何进行构建，以及我们要如何去进行发布软件包。
-
-暂定的方案是些脚本（大体的思路为：使用 bloom 生成打包需要的前置内容，然后用 dpkg 去进行打包）去进行构建软件包，然后测试这些构建成功的软件包能否正常的安装。
-
-## 移植思路
-
-目前希望用官方工具链来快速的验证软件包的构建正确性。
-
-拉取源码清单：rosinstall
-
-依赖验证：rosdep
-
-构建工具：colcon
-
-源码拉取工具：vcstool
-
-由于官方工具链全部使用 python 编写，所以使用 pipx 进行环境隔离：
+构建到 desktop 的时候我们需要跳过的 key 有下面这么多，都是一点一点尝试出来的，跳过也是各有各的原因：
 
 ```jsx
-sudo apt update
-sudo apt install -y pipx
-pipx ensurepath  # 退出重登或执行 `source ~/.profile` 让 PATH 生效
-pipx install rosdep
-pipx install rosinstall
-pipx install vcstool
+
+rosdep install -y --rosdistro jazzy --from-paths src --ignore-src \
+  --skip-keys="\
+rmw_connextdds \
+rmw_connextdds_common \
+rti-connext-dds-6.0.1 \
+rosidl_typesupport_connext_c \
+rosidl_typesupport_connext_cpp \
+connext_cmake_module \
+rti_connext_dds_cmake_module \
+python3-vcstool \
+python3-catkin-pkg-modules \
+python3-rosdistro-modules \
+python3-mypy \
+ros-jazzy-example-interfaces \
+ros-jazzy-gz-math-vendor \
+ros-jazzy-diagnostic-updater \
+ros-jazzy-rqt-action \
+ros-jazzy-pcl-msgs \
+libpcl-common \
+ros-jazzy-resource-retriever \
+libpcl-features \
+libpcl-io"
 ```
 
-### 中间件说明
+一部分一部分的说明，关于一些依赖是因为版本的问题：
 
-关于中间件，ROS 默认是使用 `rti-connext-dds-6.0.1` ，这是一个商业软件，所以我们改用开源的：rmw_cyclonedds_cpp
+```jsx
+ros-jazzy-resource-retriever \
+libpcl-features"
+executing command [sudo -H apt-get install -y libpcl-io1.14]
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树... 完成
+正在读取状态信息... 完成
+E: 无法定位软件包 libpcl-io1.14
+E: 无法按照 glob ‘libpcl-io1.14’ 找到任何软件包
+E: 无法按照正则表达式 libpcl-io1.14 找到任何软件包
+ERROR: the following rosdeps failed to install
+  apt: command [sudo -H apt-get install -y libpcl-io1.14] failed
+```
 
-所以所有变体构建我们都需要提前 `export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` 
+实际上是有 1.13 版本的：
 
-同时，需要在源码中手动移除：`src/rmw_connextdds`
+```jsx
+(.venv) ➜  ros2_ws apt search libpcl-io
+正在排序... 完成
+全文搜索... 完成
+libpcl-io1.13/nile,now 1.13.0+dfsg-ok1 amd64 [已安装]
+  Point Cloud Library - I/O library
+```
 
-否则会遇到如下的构建错误：
+版本并不会影响到构建，所以也是跳过自己手动装就行。
+
+至于 ros-jazzy 开头的就不用说了，那都是后面需要构建出来的依赖，不知道为什么被 rosdep 读出来但是没有跳过。
+
+### 中间件问题
+
+关于 rmw，也就是中间件的情况是，由于 ROS2 官方使用的是商业软件，所以我们决定使用开源的中间件，所以跳过，也就是这一部分：
+
+```jsx
+rmw_connextdds \
+rmw_connextdds_common \
+rti-connext-dds-6.0.1 \
+```
+
+这么跳过没问题，但是需要注意：
+
+1. 在构建前，需要提前指定中间件：`export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp` 
+2. 需要将 rmw_connextdds 从 src 中移除：`mv **src/rmw_connextdds** ~`
+
+如果你不移除会遇到如下问题（即使你指定了）：
 
 ```jsx
 Failed to find:
@@ -106,203 +199,188 @@ Check that these packages have been built:
 - rmw_connextdds
 ```
 
-## 移植过程
+剩下的就是关于 python 相关的软件包了。
 
-### ros_core & ros_base
+### 缺少的 python 包
 
-首先，在 ～ 下创建 ros2_wk
-
-创建源码清单，该过程会调用 rosinstall 将 ros_core 相关的软件包源码清单进行下载保存为  ros_core.repo：
+在 openkylin 上缺失 ROS2 构建时需要的 python 库
 
 ```jsx
-rosinstall_generator ros_core --rosdistro jazzy --deps > ros_core.repo
+Traceback (most recent call last):
+  File "/home/test1/ros2_ws/src/ament/ament_cmake/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+    from catkin_pkg.package import parse_package_string
+ModuleNotFoundError: No module named 'catkin_pkg'
+CMake Error at cmake/core/ament_package_xml.cmake:95 (message):
+  execute_process(/usr/bin/python3
+  /home/test1/ros2_ws/src/ament/ament_cmake/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+  /home/test1/ros2_ws/src/ament/ament_cmake/ament_cmake_core/package.xml
+  /home/test1/ros2_ws/build/ament_cmake_core/ament_cmake_core/package.cmake)
+  returned error code 1
+Call Stack (most recent call first):
+  cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+  CMakeLists.txt:15 (ament_package_xml)
+
 ```
 
-进入 ros2_wk 文件夹后，使用 vcs 工具拉取源码：
+尝试过使用 apt 进行前置依赖补全，但是发现还是缺失部分的依赖，如：
 
 ```jsx
-vcs import src < ~/ros_core.repo
+
+(.venv) ➜  ros2_ws apt search catkin_pkg
+正在排序... 完成
+全文搜索... 完成
 ```
 
-使用 rosdep 去预先安装需要的依赖：
+## 前置环境部署
+
+在这样的背景下，我们决定使用虚拟环境验证，直接使用 pip 去安装 ROS2 构建时所需要的包：
 
 ```jsx
- rosdep install -y --rosdistro jazzy --from-paths src --ignore-src
+python3 -m venv .venv
+
+source .venv/bin/activate
+python -m pip install -U pip wheel setuptools
+
+pip install catkin_pkg rospkg empy lark pyyaml
 ```
 
-在这过程中需要特殊说明的是，存在许多的相关 python 软件包缺包，这一部后续搭建起来构建平台后可以我们自己来实现，缺包清单见这里（）：
+这么做确实有效，但是要注意在 colcon 构建的参数里面指定虚拟环境的包，也就是增加两个参数：
 
 ```jsx
-rosdep install -y --rosdistro jazzy --from-paths src --ignore-src
---skip-keys="python3-vcstool python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-mypy ros-jazzy-rmw-connextdds"
+               -DPython3_EXECUTABLE="$PWD/.venv/bin/python" \
+               -DPYTHON_EXECUTABLE="$PWD/.venv/bin/python" \
 ```
 
-其他说明：实际上在构建的过程中还缺少了如下的包：
+## 构建开始
 
-- numpy
-- pytest
-- typing-extensions
-- empy
-- numpy
-- pyparsing
-- lark
-- lark-parser
+有了源码，依赖也装完了，剩下的也就是构建了。
 
-开始构建：
+这个事情说得简单其实也是跑了好十几轮，只是好在我的机器性能够强，速度还挺快，遇到的问题就是一些缺包什么的，然后最后总结出了上面的那些清单。
+
+构建指令：
 
 ```jsx
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+cd ros2_ws
 
 colcon build \
   --merge-install --symlink-install \
   --parallel-workers "$(nproc)" \
-  --cmake-args -G Ninja -DCMAKE_BUILD_TYPE=Release -DPython3_EXECUTABLE="$COLCON_PY" \
-  --packages-up-to ros_core \
-  --packages-skip rmw_connextdds rmw_connextdds_common
+  --cmake-args -G Ninja -DCMAKE_BUILD_TYPE=Release \
+               -DPython3_EXECUTABLE="$PWD/.venv/bin/python" \
+               -DPYTHON_EXECUTABLE="$PWD/.venv/bin/python" \
+  --packages-up-to desktop \
+  --packages-skip python_orocos_kdl_vendor rmw_connextdds rmw_connextdds_common
+
 ```
 
-构建结果：
+### python_orocos_kdl_vendor
+
+这个包一直都是处于一个构建失败的状情况，怀疑是这个包在使用系统的2. **pybind11 头文件**（/usr/include/pybind11/operators.h），与 PyKDL 里绑定的 hash(self) 不兼容。
+
+目前没有解决，但考虑到是个 vendor 包就不是那么紧急，先跳过了。
+
+### 小乌龟启动
+
+总之在使用上面的指令的情况下成功的构建起来 desktop 了，小乌龟也跑起来了。
+
+![alt text](./img/ok_turtlesim.png)
+
+既然小乌龟跑通了，剩下的 deb 包跑通也只是时间问题了。
+
+## 工具
+
+在这个过程中为了解决依赖的问题做了一个简单的[脚本](./tools/scan_rosdep.sh)。
+
+为什么要做？
+
+就是 rosdep 不知道抽什么风，指定跳过的 key 会重复跳出来说找不到，ros-jazzy 相关的包也会跳出来。那在拿工具没办法的情况下，也就只能自己做个简单的工具来避免这些重复耗时耗神的机械工作了。
+
+流程大概就是下面这样：
+
+1. **干跑（simulate）**：通过 `rosdep install --simulate` 获取“计划安装的 apt 命令”。
+2. **规范化**：抽取命令中的包名、去重排序，得到“**想安装**”的全集。
+3. **仓库对照**：用 `apt-cache pkgnames` 获得“**本地仓库存在**”的包名全集，做集合差异，得到“**缺失**”集合。
+4. **分类**：将缺失集合按前缀拆分为：
+    - 系统库（非 `ros-` 开头）→ 需要做包名/版本适配；
+    - ROS 二进制（`ros-jazzy-*`）→ 通常应从源码构建或加入 `-skip-keys`。
+5. **建议生成**：
+    - 规则 A：`t64` → 去掉 `t64` 后若存在则建议；
+    - 规则 B：带版本后缀（如 `1.14`）→ 在同前缀家族中选择本仓库的**最高可用版本**作为建议；
+    - 规则 C：无匹配 → 标注 `(no-suggestion)`，留待手工判断。
+
+跑的流程就是：
 
 ```jsx
-Summary: 175 packages finished [3min 37s]
-  41 packages had stderr output: ament_copyright ament_cppcheck ament_cpplint ament_flake8 ament_index_python ament_lint ament_lint_cmake ament_mypy ament_package ament_pep257 ament_pycodestyle ament_uncrustify ament_xmllint domain_coordinator launch launch_ros launch_testing launch_testing_ros launch_xml launch_yaml osrf_pycommon ros2action ros2cli ros2component ros2doctor ros2interface ros2launch ros2lifecycle ros2multicast ros2node ros2param ros2pkg ros2run ros2service ros2test ros2topic rosidl_cli rosidl_pycommon rosidl_runtime_py rpyutils sros2
-➜  ros2_ws
+(.venv) ➜  ros2_ws ./tools/scan_rosdep.sh
+[I] 使用 ROS_OS_OVERRIDE=ubuntu:24.04:noble
+[1/4] 生成 rosdep 计划安装的 APT 包清单（干跑 simulate）...
 
+[2/4] 提取 apt-get 安装的包名...
+[3/4] 和当前 APT 仓库比对，找出缺包...
+[4/4] 为缺失的系统库生成重命名/版本候选（t64 / 邻近版本）...
+
+== 结果文件 ==
+全部待装包            : /home/test1/ros2_ws/.rosdep_scan/apt_wanted.txt (数量: 37)
+缺失包（总）          : /home/test1/ros2_ws/.rosdep_scan/apt_missing_all.txt (数量: 25)
+缺失包（系统库）      : /home/test1/ros2_ws/.rosdep_scan/apt_missing_system.txt (数量: 6)
+缺失包（ROS 二进制）  : /home/test1/ros2_ws/.rosdep_scan/apt_missing_rosbins.txt (数量: 19)
+系统库候选映射        : /home/test1/ros2_ws/.rosdep_scan/apt_missing_suggestions.txt
+
+提示：
+  - /home/test1/ros2_ws/.rosdep_scan/apt_missing_rosbins.txt 里的 'ros-jazzy-*' 多半需要改为“源码拉取进 src/”或加到 --skip-keys。
+  - 下一步可执行： ./tools/gen_rosdep_overlay.sh  生成本地 rosdep 覆盖 YAML。
 ```
 
-对于 ros base 的过程也是一致的，不同的地方是：
-
-- 源码拉取的时候请写 ros_base
-- 需要 rosdep 跳过的包不一样
-    
-    ```jsx
-    rosdep install -y --rosdistro jazzy --from-paths src --ignore-src \
-      --skip-keys="rmw_connextdds rmw_connextdds_common rti-connext-dds-6.0.1 \
-                   rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp \
-                   connext_cmake_module rti_connext_dds_cmake_module python3-vcstool python3-catkin-pkg-modules rti-connext-dds-6.0.1 python3-rosdistro-modules python3-mypy"
-    ```
-    
-
-ros base 预期的构建结果：
+然后你能查看结果：
 
 ```jsx
-Finished <<< ros_base [0.85s]
-
-Summary: 223 packages finished [3min 5s]
-  67 packages had stderr output: ament_clang_format ament_copyright ament_cppcheck ament_cpplint ament_flake8 ament_index_python ament_lint ament_lint_cmake ament_mypy ament_package ament_pep257 ament_pycodestyle ament_uncrustify ament_xmllint common_interfaces domain_coordinator geometry2 kdl_parser launch launch_ros launch_testing launch_testing_ros launch_xml launch_yaml osrf_pycommon python_orocos_kdl_vendor ros2action ros2bag ros2cli ros2cli_common_extensions ros2component ros2doctor ros2interface ros2launch ros2lifecycle ros2multicast ros2node ros2param ros2pkg ros2run ros2service ros2test ros2topic ros_base ros_core ros_testing rosbag2 rosbag2_interfaces rosbag2_storage_default_plugins rosbag2_test_msgdefs rosbag2_tests rosidl_cli rosidl_pycommon rosidl_runtime_py rpyutils sensor_msgs_py sros2 sros2_cmake stereo_msgs tf2 tf2_eigen_kdl tf2_msgs tf2_py tf2_ros_py tf2_tools urdf visualization_msgs
-➜  ros2_ws
+(.venv) ➜  ros2_ws cd .rosdep_scan
+(.venv) ➜  .rosdep_scan cat apt_missing_all.txt
+libqt5core5t64
+libqt5gui5t64
+libqt5widgets5t64
+python3-catkin-pkg-modules
+python3-rosdistro-modules
+python3-vcstool
+ros-jazzy-angles
+ros-jazzy-depthimage-to-laserscan
+ros-jazzy-image-pipeline
+ros-jazzy-image-transport-plugins
+ros-jazzy-joy
+ros-jazzy-laser-filters
+ros-jazzy-pcl-conversions
+ros-jazzy-perception-pcl
+ros-jazzy-rmw-connextdds
+ros-jazzy-ros-gz-bridge
+ros-jazzy-ros-gz-image
+ros-jazzy-ros-gz-interfaces
+ros-jazzy-ros-gz-sim
+ros-jazzy-ros-gz-sim-demos
+ros-jazzy-rqt-common-plugins
+ros-jazzy-teleop-twist-joy
+ros-jazzy-teleop-twist-keyboard
+ros-jazzy-urdfdom-headers
+ros-jazzy-vision-opencv
+(.venv) ➜  .rosdep_scan cat apt_missing_system.txt
+libqt5core5t64
+libqt5gui5t64
+libqt5widgets5t64
+python3-catkin-pkg-modules
+python3-rosdistro-modules
+python3-vcstool
 ```
 
-### Desktop
+这么做的好处就是我不需要一遍一遍的跑 rosdep 以及 apt，脚本可以直接帮我把这个事情做了。
 
-这个变体中[预期](https://www.ros.org/reps/rep-2001.html#id98)新增的软件包是：
+我现在就知道我缺少的系统级依赖就是：
 
 ```jsx
-Desktop
-- desktop:
-    extends:  [ros_base]
-    packages: [action_tutorials_cpp, action_tutorials_interfaces,
-               action_tutorials_py, angles, composition,
-               demo_nodes_cpp, demo_nodes_cpp_native,
-               demo_nodes_py, depthimage_to_laserscan,
-               dummy_map_server, dummy_robot_bringup,
-               dummy_sensors,
-               examples_rclcpp_minimal_action_client,
-               examples_rclcpp_minimal_action_server,
-               examples_rclcpp_minimal_client,
-               examples_rclcpp_minimal_composition,
-               examples_rclcpp_minimal_publisher,
-               examples_rclcpp_minimal_service,
-               examples_rclcpp_minimal_subscriber,
-               examples_rclcpp_minimal_timer,
-               examples_rclcpp_multithreaded_executor,
-               examples_rclpy_executors,
-               examples_rclpy_minimal_action_client,
-               examples_rclpy_minimal_action_server,
-               examples_rclpy_minimal_client,
-               examples_rclpy_minimal_publisher,
-               examples_rclpy_minimal_service,
-               examples_rclpy_minimal_subscriber, image_tools,
-               intra_process_demo, joy, lifecycle, logging_demo,
-               pcl_conversions, pendulum_control, pendulum_msgs,
-               quality_of_service_demo_cpp,
-               quality_of_service_demo_py, rqt_common_plugins,
-               rviz2, rviz_default_plugins, teleop_twist_joy,
-               teleop_twist_keyboard, tlsf, tlsf_cpp,
-               topic_monitor, turtlesim]
+libqt5core5t64
+libqt5gui5t64
+libqt5widgets5t64
+python3-catkin-pkg-modules
+python3-rosdistro-modules
+python3-vcstool
 ```
 
-所以这个变体能起来小乌龟也能起来了。
-
-目前已知在移植 desktop 时存在的问题是：
-
-1. rosinstall 无法下载 desktop 变体
-2. 存在 t64 包命名问题
-3. openkylin 上的包版本不满足 jazzy 要求
-
-关于 rosinstall 的问题是：
-
-```jsx
-➜  ~ rosinstall_generator ros_desktop --rosdistro jazzy --deps > ~/ros_desktop.repos
-The following unreleased packages/stacks will be ignored: ros_desktop
-No packages/stacks left after ignoring unreleased
-➜  ~
-```
-
-目前暂时的解决方案是自己[根据](https://www.ros.org/reps/rep-2001.html#id40:~:text=packages%3A%20%5Bgeometry2%2C%20kdl_parser%2C%20robot_state_publisher%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20rosbag2%2C%20urdf%5D-,Desktop,-%2D%20desktop%3A%0A%20%20%20%20extends%3A%20%20%5Bros_base%5D%0A%20%20%20%20packages%3A%20%5Baction_tutorials_cpp%2C%20action_tutorials_py)官网上的包去自己一个一个的找，但是这样存在分支问题，需要单独找时间我们自己维护一份 `desktop.repo` 。
-
-关于 t64 包的问题是，因为 rosdep 返回如下：
-
-```jsx
-executing command [sudo -H apt-get install -y libqt5core5t64]
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树... 完成
-正在读取状态信息... 完成
-E: 无法定位软件包 libqt5core5t64
-ERROR: the following rosdeps failed to install
-  apt: command [sudo -H apt-get install -y libqt5core5t64] failed
-```
-
-目前考虑直接让 rosdep 跳过。
-
-关于 openkylin 上依赖版本不满足的问题是：
-
-```jsx
-
-executing command [sudo -H apt-get install -y libpcl-features1.14]
-正在读取软件包列表... 完成
-正在分析软件包的依赖关系树... 完成
-正在读取状态信息... 完成
-E: 无法定位软件包 libpcl-features1.14
-E: 无法按照 glob ‘libpcl-features1.14’ 找到任何软件包
-E: 无法按照正则表达式 libpcl-features1.14 找到任何软件包
-ERROR: the following rosdeps failed to install
-  apt: command [sudo -H apt-get install -y libpcl-features1.14] failed
-➜  ros2_ws apt search libpcl-features
-正在排序... 完成
-全文搜索... 完成
-libpcl-features1.13/nile,now 1.13.0+dfsg-ok1 amd64 [已安装，自动]
-  Point Cloud Library - features library
-
-➜  ros2_ws
-```
-
-关于这部分的内容是我们需要考虑我们要自己去调研一下这个问题是怎么一回事。
-
-## 缺包清单
-
-### ros_core
-
-```jsx
-"catkin_pkg>=0.5.2"
- "rosdistro>=0.9,<1.0"
- "mypy>=1.9.0"
- python3-vcstool
- numpy
- pytest
- typing-extensions
- empy
- numpy 
- pyparsing
- lark lark-parser
-```
+我们上文说过了，t64 的包不是问题，python 包的缺失也通过虚拟环境解决了，所以我们才可以快速的跑通小乌龟。这就是这个脚本的作用以及意义。

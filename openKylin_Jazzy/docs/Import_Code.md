@@ -264,6 +264,14 @@ echo 'export ROSDISTRO_INDEX_URL=https://mirrors.ustc.edu.cn/rosdistro/index-v4.
 ```
 </details>
 
+执行生成
+
+```bash
+bloom-generate rosdebian . --os-name ubuntu --os-version noble --ros-distro jazzy
+```
+
+因软件包名导致的依赖问题需要在`debian/control`中手动处理（暂未观测到）
+
 再手动处理一些软件包，例如元包不需要编译，打出来的包不需要区分架构，可以将`debian/control`中的`Architecture`设为`all`
 
 ## 测试编译
